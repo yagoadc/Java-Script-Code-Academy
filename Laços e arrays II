@@ -1,0 +1,7 @@
+var names = ['Goku','Shaka','Itachi','Netero','Killua'];
+
+for ( i=0; i < names.length; i++) {
+    
+    console.log('Eu conheço alguém chamado'+' '+names[i]);
+    
+    }
