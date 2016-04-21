@@ -21,7 +21,7 @@ for ( i=0; i<text.length; i++) { // Percorre cada posição do texto//
         
         for ( j = i; j < (myName.length + i); j++) { 
         
-            if ( text[j] === 'Y'|| 'a' || 'g' || 'o' ) { // Garante que ele encontre apenas caraccters do sue nome //
+            if ( text[j] === 'Y'|| 'a' || 'g' || 'o' ) { // Garante que ele encontre apenas caracteres do seu nome //
             
                 hits.push(text[j]);
             }
