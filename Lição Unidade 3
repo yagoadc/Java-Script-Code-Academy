@@ -1,0 +1,43 @@
+/*jshint multistr:true */ //  /*jshint... O que ela faz é dizer ao console para parar de se preocupar com nosso uso de barras invertidas.//  
+
+text = 'Faça elevar Yago \
+O cosmo no seu coração \
+Todo mal Yago , combater \
+Despertar o poder Yago \
+Sua constelação Yago \
+Sempre irá Yago te proteger \
+Supera a dor \
+E dá Yago forças pra lutar';
+
+myName = 'Yago';
+
+hits = [];
+
+for ( i=0; i<text.length; i++) { // Percorre cada posição do texto//
+    
+    if ( text[i] === 'Y' ) { // Comparar cada letra à primeira letra do seu nome//
+    
+        //Ele vai enviar essa letra e todas as que se seguem para um array, parando quando o número de letras que ele envia é igual ao número de letras do seu nome. //
+        
+        for ( j = i; j < (myName.length + i); j++) { 
+        
+            if ( text[j] === 'Y' or 'a' or 'g' or 'o') {
+            
+                hits.push(text[j]);
+            }
+        
+        
+            
+        }  
+    }
+}
+
+if ( hits.length === 0 ) {
+    
+    console.log( "Seu nome nao foi encontrado!" );
+    
+} else {
+    
+    
+    console.log( hits);
+}
