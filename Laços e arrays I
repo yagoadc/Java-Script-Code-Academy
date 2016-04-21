@@ -1,0 +1,7 @@
+// Vamos exibir todos os elementos de um array usando um laco for
+
+var cities = ["Melbourne", "Amman", "Helsinki", "NYC",'São João','Caxias','Ipanema','Bangu',];
+
+for (var i = 0; i < cities.length; i++) {
+    console.log("Eu gostaria de visitar " + cities[i]);
+}
