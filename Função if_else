@@ -1,0 +1,19 @@
+// Escreva sua funcao abaixo. 
+// Nao se esqueca de chamar sua função!
+var sleepCheck = function(numHours) {
+    
+    if ( numHours >= 8) {
+        
+        return "Você está dormindo o bastante! Talvez até demais!";
+        
+    } else {
+        
+        return "Vá para a cama!";
+        
+    };
+};
+
+console.log(sleepCheck(10));
+console.log(sleepCheck(5));
+console.log(sleepCheck(8));
+   
