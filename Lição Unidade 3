@@ -15,13 +15,13 @@ hits = [];
 
 for ( i=0; i<text.length; i++) { // Percorre cada posição do texto//
     
-    if ( text[i] === 'Y' ) { // Comparar cada letra à primeira letra do seu nome//
+    if ( text[i] === 'Y'  ) {    // Comparar cada letra à primeira letra do seu nome//
     
         //Ele vai enviar essa letra e todas as que se seguem para um array, parando quando o número de letras que ele envia é igual ao número de letras do seu nome. //
         
         for ( j = i; j < (myName.length + i); j++) { 
         
-            if ( text[j] === 'Y' or 'a' or 'g' or 'o') {
+            if ( text[j] === 'Y'|| 'a' || 'g' || 'o' ) { // Garante que ele encontre apenas caraccters do sue nome //
             
                 hits.push(text[j]);
             }
