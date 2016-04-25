@@ -1,0 +1,14 @@
+for ( i = 50; i>0 ; i-=5) {
+    console.log(i);
+}
+
+var cond = true;
+while ( cond === true) {
+    console.log('Estude mais a matéria!');
+    cond = false;
+}
+
+do {
+    
+    var cond2 = prompt('Como estou hoje?');
+} while ( cond2 === 'supimpa');
