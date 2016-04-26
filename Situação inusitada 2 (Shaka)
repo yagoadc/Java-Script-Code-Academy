@@ -1,0 +1,37 @@
+var user = prompt("Você esta caminhando pela Grécia, cuidando da sua vida, e encontra Shaka de Virgem!!! Você luta com ele (FIGHT), chama ele para tomar uma cerveja (BAR), ou foge (RUN)?").toUpperCase()
+
+switch (user) {
+    
+    case 'FIGHT':
+        var strong = prompt("Que burro! Você é forte, sim (YES) ou não (NO)?").toUpperCase();
+        var smart = prompt("Você é inteligente?").toUpperCase();
+        if(strong === 'YES' && smart === 'YES') {
+          console.log("Você é um Ikki na vida! Seu ataque não surti efeito e morre para  o Tesouro do Céu!");
+        } else {
+          console.log("Bem, se fosse mais inteligente,provavelmente nao teria tentado lutar com Shaka de Virgem.Voce morreu feio!");
+        }
+        
+        break;
+    case 'BAR' :
+        var money = prompt("Ele diz que não se mistura com gentalha. Voce aceita isso de boa? sim (YES) ou nao (NO)?").toUpperCase();
+        var dollars = prompt("Ele ameça atacar. Voce se ajoelharia e clamaria por sua vida?").toUpperCase();
+        if(money === 'YES' || dollars === 'YES') {
+          console.log("Ótimo! Agora ele te acha um cara maneiro  e deixa vc ir para o bar em paz");
+        } else {
+          console.log("Otário! Ele te choga num mundo paralelo  e te obriga a dormir de conxinha com Shun por um ano"           );
+        }
+        
+        break;
+    case 'RUN' :
+        var fast = prompt("Vamos dar o fora! Voce é rapido, sim (YES) ou não (NO)?").toUpperCase();
+        var headStart = prompt("Você comecou com vantagem?").toUpperCase();
+        if(fast === 'YES' || headStart === 'YES') {
+          console.log("Você conseguiu fugir -- por pouco! Você nunca mais volta para a Grécia!.");
+        } else {
+          console.log("Você não é rapido e não comecou com vantagem? Não tinha a menor chance! O Shaka usa Ciclo das Seis Existências e vc morre! ");
+        }
+        
+        break;
+    default :
+    console.log('Não entende o que ele fala? Vá para um curso e depois clique executar pra tomar sua escolha FIGHT, BAR, ou RUN!');
+}
