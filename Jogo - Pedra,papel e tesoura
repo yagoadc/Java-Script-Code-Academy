@@ -1,69 +1,89 @@
-var userChoice = prompt("Voce escolhe pedra, papel ou tesoura?");
+var userChoice = prompt("Voce escolhe pedra, papel ou tesoura?").toLowerCase();
 
 var computerChoice = Math.random();
 
-if (0 < computerChoice < 0.33) {
-    
-	computerChoice = "pedra";
-	
-} else if(0.34 < computerChoice <= 0.67) {
-    
-	computerChoice = "papel";
-	
-} else {
-    
-	computerChoice = "tesoura";
-	
-}; 
+ //console.log(computerChoice); Verifica valor do Math.radom
 
-console.log("Computer: " + computerChoice);
-
-var compare = function(choice1,choice2) {
+if ( userChoice !== 'pedra' && userChoice !== 'papel' && userChoice !== 'tesoura') {
     
-    if (choice1 === choice2) {
+     do {
         
-        return "O resultado é um empate!";
+        console.log('Escolha invalida');
         
+        
+        var userChoice = prompt("Voce escolhe pedra, papel ou tesoura?").toLowerCase();
+        
+    } while ( userChoice != 'pedra' && userChoice !='papel' && userChoice != 'tesoura' );
+       
+
+}
+  
+
+    if (computerChoice >= 0 && computerChoice <= 0.33) {
+    
+	    computerChoice = "pedra";
+	
+    } else if(computerChoice > 0.34 && computerChoice <= 0.67) {
+    
+ 	    computerChoice = "papel";
+	
+    } else {
+    
+	    computerChoice = "tesoura";
+	
     }
+
+    console.log("Computer: " + computerChoice);
     
-    else if (choice1 === 'pedra') {
+     var compare = function(choice1,choice2) {
+    
+        if (choice1 === choice2) {
         
-        if (choice2 === 'tesoura') {
+            return "O resultado é um empate!";
+        
+        }
+    
+        else if (choice1 === 'pedra') {
+        
+            if (choice2 === 'tesoura') {
             
-            return 'pedra vence';
+                return 'pedra vence';
             
-            } else {
+                } else {
                 
-                return 'papel vence';
+                    return 'papel vence';
                 
                 }
-    }
+        }
            
-    else if (choice1 === 'papel') {
+        else if (choice1 === 'papel') {
         
-        if (choice2 === 'pedra') {
+            if (choice2 === 'pedra') {
             
-            return 'papel vence';
+                return 'papel vence';
             
-            } else {
+                } else {
                 
-                return 'tesoura vence';
+                    return 'tesoura vence';
                 
                 }
-    }
+        }
         
-    else  {
-        if (choice2 === 'pedra') {
+        else  {
+
+            if (choice2 === 'pedra') {
               
-              return 'pedra vence';
+                  return 'pedra vence';
             
-            } else {
+                } else {
                 
-                return'tesoura vence';
+                    return'tesoura vence';
                 
                 }
+        }
+
     }
     
-};
 
-console.log(compare(userChoice, computerChoice));
+
+console.log(compare(userChoice,computerChoice));
