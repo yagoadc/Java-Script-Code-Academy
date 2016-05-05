@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Estou jogando pedra,papel ou tesoura.</p>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+
+<p>Imagem do computador</p>
+<img id="compImage" src="erro.jpg" width="350" height="260">
+
+
+<p>Imagem do jogador</p>
+<img id="jogImage" src="erro.jpg" width="350" height="260">
+
+
+<script>
+
+    
+
+var userChoice = prompt("Voce escolhe pedra, papel ou tesoura?").toLowerCase();
+
+var imagecomp = document.getElementById('compImage');
+
+var jogcom = document.getElementById('jogImage');
+
+var computerChoice = Math.random();
+
+// document.getElementById('demo3'). innerHTML = computerChoice / Verifica o valor do Math.random /
+
+if ( userChoice !== 'pedra' && userChoice !== 'papel' && userChoice !== 'tesoura') {
+    
+     do {
+        
+       //console.log('Escolha invalida');
+        document.getElementById('demo'). innerHTML = "Escolha invalida"
+
+        jogcom.src = "erro.jpg";
+
+        imagecomp.src = "erro.jpg";
+        
+        var userChoice = prompt("Voce escolhe pedra, papel ou tesoura?").toLowerCase();
+        
+    } while ( userChoice != 'pedra' && userChoice !='papel' && userChoice != 'tesoura' );
+       
+} 
+
+	 if (userChoice === "pedra") {
+
+        jogcom.src = "pedra.jpg";
+        
+    } else if (userChoice === "papel") {
+
+        jogcom.src = "papel.jpg";
+        
+    } else {
+
+        jogcom.src = "tesoura.jpg";
+        
+    }
+  
+
+    if (computerChoice >= 0 && computerChoice <= 0.33) {
+    
+	    computerChoice = "pedra";
+
+	    imagecomp.src = "pedra.jpg"
+	
+    } else if(computerChoice > 0.34 && computerChoice <= 0.67) {
+    
+ 	    computerChoice = "papel";
+
+ 	    imagecomp.src = "papel.jpg"
+	
+    } else {
+    
+	    computerChoice = "tesoura";
+
+	    imagecomp.src = "tesoura.jpg"
+	
+    }
+
+    //console.log("Computer: " + computerChoice);
+    document.getElementById('demo2'). innerHTML = "Computer: " + computerChoice
+    
+     var compare = function(choice1,choice2) {
+    
+        if (choice1 === choice2) {
+        
+            return "O resultado deu um empate!";
+        
+        }
+    
+        else if (choice1 === 'pedra') {
+        
+            if (choice2 === 'tesoura') {
+            
+                return 'pedra vence';
+            
+                } else {
+                
+                    return 'papel vence';
+                
+                }
+        }
+           
+        else if (choice1 === 'papel') {
+        
+            if (choice2 === 'pedra') {
+            
+                return 'papel vence';
+            
+                } else {
+                
+                    return 'tesoura vence';
+                
+                }
+        }
+        
+        else  {
+
+            if (choice2 === 'pedra') {
+              
+                  return 'pedra vence';
+            
+                } else {
+                
+                    return'tesoura vence';
+                
+                }
+        }
+
+    }
+
+
+
+
+ 
+
+ document.getElementById('demo4').innerHTML = compare(userChoice,computerChoice);
+
+
+
+
+</script>
+
+</body>
+</html>

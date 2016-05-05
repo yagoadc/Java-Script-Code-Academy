@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Estou jogando pedra,papel ou tesoura. Clique na imagem para fazer sua escolha.</p>
+
+<button onclick="myFunction('pedra')"><img src = 'pedra.jpg' width = '200px' height = '300px'/></button>
+
+<button onclick="myFunction('papel')"><img src = 'papel.jpg' width = '200px' height = '300px'/></button>
+
+<button onclick="myFunction('tesoura')"><img src = 'tesoura.jpg' width = '200px' height = '300px'/></button>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+
+<p>Imagem do computador</p>
+<img id="compImage" src="carrega.jpg" width="350" height="260">
+
+<script>
+
+function myFunction(userChoice) {
+
+    var imagecomp = document.getElementById('compImage');
+
+    var computerChoice = Math.random();
+
+    // document.getElementById('demo3'). innerHTML = computerChoice / Verifica o valor do Math.random /
+
+    if (computerChoice >= 0 && computerChoice <= 0.33) {
+    
+	    computerChoice = "pedra";
+
+	    imagecomp.src = "pedra.jpg"
+	
+    } else if(computerChoice > 0.34 && computerChoice <= 0.67) {
+    
+ 	    computerChoice = "papel";
+
+ 	    imagecomp.src = "papel.jpg"
+	
+    } else {
+    
+	    computerChoice = "tesoura";
+
+	    imagecomp.src = "tesoura.jpg"
+	
+    }
+
+      //console.log("Computer: " + computerChoice);
+      document.getElementById('demo2'). innerHTML = "Computer: " + computerChoice
+    
+     var compare = function(choice1,choice2) {
+    
+        if (choice1 === choice2) {
+        
+            return "O resultado deu um empate!";
+        
+        }
+    
+        else if (choice1 === 'pedra') {
+        
+            if (choice2 === 'tesoura') {
+            
+                return 'pedra vence';
+            
+                } else {
+                
+                    return 'papel vence';
+                
+                }
+        }
+           
+        else if (choice1 === 'papel') {
+        
+            if (choice2 === 'pedra') {
+            
+                return 'papel vence';
+            
+                } else {
+                
+                    return 'tesoura vence';
+                
+                }
+        }
+        
+        else  {
+
+            if (choice2 === 'pedra') {
+              
+                  return 'pedra vence';
+            
+                } else {
+                
+                    return'tesoura vence';
+                
+                }
+        }
+
+    
+
+    }
+     document.getElementById('demo4').innerHTML = compare(userChoice,computerChoice);
+
+}
+
+</script>
+
+</body>
+</html>
