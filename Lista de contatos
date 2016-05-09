@@ -1,0 +1,53 @@
+var friends = {};
+
+friends.bill = {
+    firstName: "Bill",
+    lastName: "Gates",
+    number: "(206) 555-5555",
+    address: ['One Microsoft Way','Redmond','WA','98052']
+  };
+friends.steve = {
+    firstName: "Steve",
+    lastName: "Jobs",
+    number: "(408) 555-5555",
+    address: ['One Microsoft Way','Redmond','WA','98052']
+   };
+friends.ross = {
+  firstName: "Ross",
+  lastName: "Geller",
+  number: "(408) 555-5555",
+  address: ['One Microsoft Way','Redmond','WA','98052']
+    };
+friends.monica = {
+  firstName: "Monica",
+  lastName: "Geller",
+  number: "(408) 555-5555",
+  address: ['One Microsoft Way','Redmond','WA','98052']
+    };
+    
+
+    
+var list = function (item) {
+    
+    for ( var chave in item ) {
+        
+        console.log(chave);
+        
+    }
+};
+
+
+
+var search = function (louco) {
+    for ( bora in friends ) {
+        
+        if(friends[bora].firstName === louco) {
+            console.log(friends[bora]);
+            return friends[bora];
+        }
+    }
+};
+
+
+list(friends);
+search("Monica");
