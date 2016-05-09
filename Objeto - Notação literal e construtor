@@ -1,0 +1,12 @@
+/ Nos ajude a criar snoopy usando notacao literal
+// Lembre-se que snoopy e um "beagle" com 10 anos de idade.
+var snoopy = {
+    species: "beagle",
+    age: 10   
+}
+
+// ajude a ceirar buddy usando notacao de construtor
+// buddy e um "golden retriever" com 5 anos de idade
+var buddy = new Object();
+    buddy.species = "golden retriever";
+    buddy.age = 5;
